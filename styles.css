@@ -1,0 +1,177 @@
+:root{
+    --border-radius: 20px;
+    --primary-color: rgb(20, 20, 19);
+    --secondary-color: rgb(53, 45, 38);
+    --tertiary-color: rgb(250, 250, 250);
+    --font-two: sans-serif;
+    --offers-image: 350px;
+}
+
+@font-face {
+  font-family: 'Anton'; /* You can name this whatever you want */
+  src: url('assets/fonts/Anton-Regular.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+}
+
+body{
+    background-color: var(--primary-color) !important;
+    padding: 0;
+    margin: 0;
+}
+
+.hero {
+  padding-top: 8rem;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 70px;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+nav.sticky {
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px 70px;
+}
+
+nav.sticky a,
+nav.sticky ul li a {
+  color: black; /* Changes text to black when sticky */
+}
+
+nav a, nav ul li a {
+    color: var(--tertiary-color);
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0 20px;
+}
+
+nav ul li a{
+    font-family: var(--font-two) !important;
+}
+
+.paragraph{
+    display: flex;
+}
+
+.paragraph p{
+    font-family: sans-serif;
+    width: 200px;
+}
+
+.sans{
+    font-family: var(--font-two) !important;
+}
+
+.twhite{
+    color: var(--tertiary-color) !important;
+}
+
+.offer1{
+    background: url(assets/img/5050-expanded.jpeg);
+    background-blend-mode: soft-light;
+    background-color: rgb(41, 41, 41);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: var(--offers-image);
+    transform: translateY(0px);
+    transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.offer1:hover {
+    background-blend-mode: soft-light;
+    background-color: rgba(41, 41, 41, 0.007);
+    transform: translateY(-10px);
+}
+
+.offer2{
+    background-color: rgb(0, 0, 0);
+    height: var(--offers-image);
+    transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.offer2:hover {
+    background-color: rgba(41, 41, 41, 0.007);
+    transform: translateY(-10px);
+}
+
+.vids{
+    height: var(--offers-image);
+    opacity: 0.3;
+}
+
+.vids:hover {
+    opacity: 1;
+}
+
+#music-player-button {
+    position: fixed;
+    z-index: 111111;
+    top: 5vh;
+    right: 3vh;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-block;
+    animation: bloop 4s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes bloop {
+    0% {
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+    
+}
+
+/* When active */
+#music-player-button.active {
+    background-color: transparent;
+    border: 5px solid white; /* Fixed border thickness */
+}
+
+/* Invert on white background */
+body.white-bg #music-player-button {
+    background-color: black;
+}

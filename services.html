@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/Bootstrap/bootstrap/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="music-player-button" onclick="toggle()"></div>
+    <audio id="bg-music" preload="auto" src="./assets/audio/loop.mp3"></audio>
+
+    <section class="container-fluid">
+        <nav id="mainNav">
+            <a href="index.html"><h1>ALL IN ONE</h1></a>
+            <ul>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="content.html">Content</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class="hero">
+        <video class="container-sm px-0 d-flex bg-dark text-white justify-content-center align-items-center rounded-4" src="assets/vide/OFFERS.mp4" autoplay data-aos="fade-up">
+        </video>
+    </section>
+
+    <section class="my-5">
+        <div class="container twhite">
+            <!-- <div class="w-100 text-center my-5" data-aos="fade-up" data-aos-delay="100">
+                <h1 class="display-1">FEEL FREE TO BROWSE</h1>
+            </div> -->
+
+            <div class="row justify-content-center align-items-center">
+                <div class="col d-flex text-center flex-column justify-content-center offer1 align-items-center rounded-4 offer1 mx-3" data-aos="fade-up" data-aos-delay="100">
+                    <p class="my-5 fs-2">Graphics <br/> Design</p>
+                </div>
+
+                <div class="col d-flex flex-column justify-content-center align-items-center rounded-4 offer2 mx-3 overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <video class="position-absolute d-flex flex-column justify-content-center align-items-center rounded-4 mx-3 vids" src="assets/vide/controller.mp4" autoplay loop>
+                    </video>
+                    <div class="z-1 text-center">
+                        <p class="my-5 fs-2 videoText">Animation</p>
+                    </div>
+                </div>
+
+                <div class="col d-flex flex-column justify-content-center align-items-center rounded-4 offer2 mx-3 overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <video class="position-absolute d-flex flex-column justify-content-center align-items-center rounded-4 mx-3 vids" src="assets/vide/websites video.mp4" autoplay loop>
+                    </video>
+                    <div class="z-1 text-center">
+                        <p class="my-5 fs-2 videoText">Front-End Web Development</p>
+                    </div>
+                </div>
+
+                <div class="col d-flex flex-column justify-content-center align-items-center rounded-4 bg-dark mx-3" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/icons/icons8-facebook-480.png" class="rounded-5" style="width: 50%;" alt="">
+                    <p class="my-5">Facebook</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid bg-white py-2 pb-5 m-0">
+            <div class="w-100 text-center my-5" data-aos="fade-up" data-aos-delay="100">
+                <h1 style="font-size: 200px;">THE ALL IN ONE</h1>
+            </div>
+            <div class="row justify-content-center align-items-start g-2">
+                <div class="col">
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                        <h2>LOCATION</h2>
+                        <h6 class="sans w-50 m-auto mt-5">No. 3, B-close, 5th Avenue Mahfas Sunshine Estate, Phase 2, Kurudu Along Nyanya-Karshi Road Abuja</h6>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                        <h2>CONTACT</h2>
+                        <h6 class="sans w-50 m-auto mt-5">+234 701 394 8480</h6>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                        <h2>FOLLOW ME</h2>
+                        <h6 class="sans"></h6>
+                    </div>
+                </div>
+            </div>
+    </footer>
+</body>
+<script src="assets/Bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="app.js"></script>
+
+<script>
+
+        function toggle() {
+            const audio = document.getElementById("music");
+            const btn = document.getElementById("music-player-button");
+
+            // Toggle class for UI
+            const isPlaying = btn.classList.toggle("active");
+
+            // Ternary operation for play or pause
+            isPlaying ? audio.play() : audio.pause();
+
+            // Optional: save state (if you have a backend)
+            // saveAudioState(audio.currentTime, isPlaying);
+        }
+
+</script>
+</html>

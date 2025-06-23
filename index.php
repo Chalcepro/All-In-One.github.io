@@ -10,16 +10,9 @@
 </head>
 <body>
 
-    <section class="container-fluid">
-        <nav id="mainNav">
-            <a href="index.html"><h1>ALL IN ONE</h1></a>
-            <ul>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="content.html">Content</a></li>
-            </ul>
-        </nav>
-    </section>
+    <?php
+        require_once("./components/nav.php");
+    ?>
 
     <section class="hero">
         <div class="container-sm d-flex bg-dark text-white justify-content-center align-items-center rounded-4" style="height: 75vh; width: 100%; background: url(assets/img/neon\ racecarHD.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;" data-aos="fade-up">
@@ -123,31 +116,9 @@
         </div>
     </section>
 
-    <footer class="container-fluid bg-white py-2 pb-5 m-0">
-            <div class="w-100 text-center my-5" data-aos="fade-up" data-aos-delay="100">
-                <h1 style="font-size: 200px;">THE ALL IN ONE</h1>
-            </div>
-            <div class="row justify-content-center align-items-start g-2">
-                <div class="col">
-                    <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                        <h2>LOCATION</h2>
-                        <h6 class="sans w-50 m-auto mt-5">No. 3, B-close, 5th Avenue Mahfas Sunshine Estate, Phase 2, Kurudu Along Nyanya-Karshi Road Abuja</h6>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                        <h2>CONTACT</h2>
-                        <h6 class="sans w-50 m-auto mt-5">+234 701 394 8480</h6>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                        <h2>FOLLOW ME</h2>
-                        <h6 class="sans"></h6>
-                    </div>
-                </div>
-            </div>
-    </footer>
+    <?php
+        require_once("./components/footer.php");
+    ?>
 </body>
 <script src="assets/Bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>

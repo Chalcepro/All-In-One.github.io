@@ -1,0 +1,1 @@
+hi = document.createElement("h1")
